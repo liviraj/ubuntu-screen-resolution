@@ -1,0 +1,20 @@
+xrandr --newmode "1368x768_60.00"   85.25  1368 1440 1576 1784  768 771 781 798 -hsync +vsync
+xrandr --addmode VGA-1 1368x768_60.00
+xrandr --output VGA-1 --mode 1368x768_60.00
+
+1)Save the above code as .sh file and store in your system with file permission as sudo chmod +x filename.sh
+
+2) create a file with below code and save it as filename.desktop as extension and store it in home/username/.config/autostart/
+
+[Desktop Entry]
+Name=ScreenReso
+GenericName=File Synchronizer
+Comment=Set Screen Resolution
+Exec=/opt/resolution/resolution.sh
+Terminal=false
+Type=Application
+Icon=dropbox
+Categories=Network;FileTransfer;
+StartupNotify=false
+
+3)Now restart your ubuntu system to see the resolution changes !
